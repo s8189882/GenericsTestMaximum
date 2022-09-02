@@ -1,6 +1,21 @@
 package generics.max.element.test;
 
-public class MaximumElement {
+public class MaximumElement <T extends Comparable<T>> {
+	
+	T variable1;
+	T variable2;
+	T variable3;
+	
+	
+	public MaximumElement(T variable1, T variable2, T variable3) {
+		this.variable1 = variable1;
+		this.variable2 = variable2;
+		this.variable3 = variable3;
+	}
+
+	public void findMax() {
+		MaximumElement.findMax(this.variable1, this.variable2, this.variable3);
+	}
 	
 	public static void main(String[] args) {
 		System.out.println("Test Maximum of 3 variables\n");
