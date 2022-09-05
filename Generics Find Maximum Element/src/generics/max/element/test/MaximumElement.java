@@ -11,9 +11,13 @@ public class MaximumElement {
 		Float floatNum1 = 23.2f;
 		Float floatNum2 = 11.3f;
 		Float floatNum3 = 5.5f;
+		String string1 = "Leopard";
+		String string2 = "Zebra";
+		String string3 = "Chimpanzee";
 		
 		findMax(firstNum, secondNum, thirdNum);
 		findMax(floatNum1, floatNum2, floatNum3);
+		findMax(string1, string2, string3);
 	}
 	
 	public static void findMax(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
@@ -46,5 +50,21 @@ public class MaximumElement {
 		}
 		
 		System.out.println(maximumNumber + " is maximum out of "+firstNumber+", "+secondNumber+" and "+thirdNumber);
+	}
+	
+	public static void findMax(String firstString, String secondString, String thirdString) {
+		String maximumString;
+		
+		if(firstString.compareTo(secondString)>0 && firstString.compareTo(thirdString)>0) {
+			maximumString = firstString;
+		}
+		else if(secondString.compareTo(firstString)>0 && secondString.compareTo(thirdString)>0) {
+			maximumString = secondString;
+		}
+		else {
+			maximumString = thirdString;
+		}
+		
+		System.out.println(maximumString + " is maximum out of "+firstString+", "+secondString+" and "+thirdString);
 	}
 }
