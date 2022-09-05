@@ -26,6 +26,11 @@ public class MaximumElement <T extends Comparable<T>> {
 		MaximumElement.findMax(this.variable1, this.variable2, this.variable3, this.variable4, this.variable5, this.variable6);
 	}
 	
+	public static <E> void printmax(E maximum, ArrayList<E> list) {
+		System.out.println();
+		System.out.println(maximum + " is the maximum out of " + list);
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Test Maximum of 3 variables\n");
 		
@@ -54,7 +59,6 @@ public class MaximumElement <T extends Comparable<T>> {
 	}
 	
 	public static <E extends Comparable<E>> void findMax(E firstVariable, E secondVariable, E thirdVariable, E fourthVariable, E fifthVariable, E sixthVariable) {
-		E maximumVariable;
 		ArrayList<E> variableList = new ArrayList<>();
 		
 		variableList.add(firstVariable);
@@ -63,8 +67,7 @@ public class MaximumElement <T extends Comparable<T>> {
 		variableList.add(fourthVariable);
 		variableList.add(fifthVariable);
 		variableList.add(sixthVariable);
-		
-		System.out.println();
-		System.out.println(Collections.max(variableList) + " is the maximum out of " + variableList);
-		}
+
+		printmax(Collections.max(variableList) , variableList);
+	}
 }
